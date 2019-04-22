@@ -1,15 +1,29 @@
 <template>
   <div class="Home-head">
-    <!-- <img src="./1.jpg" alt> -->
+    <!-- <img id="img" src="./1.jpg" alt> -->
     <canvas id="tutorial" width="150" height="150"></canvas>
   </div>
 </template>
 <script>
 import { constants } from "crypto";
-var ctx = document.getElementById("tutorial").getContext('2d');
+
 export default {
-  created() {
+  mounted() {
+  let ctx = document.getElementById("tutorial").getContext('2d');
   console.log(ctx)
+  ctx.moveTo(10,10);
+  ctx.lineTo(50,10);
+  ctx.lineTo(50,100);
+  ctx.lineTo(10,100);
+  ctx.lineTo(10,10);
+  var img=new Image()
+  img.src="./1.jpg"
+  img.onload = () => {
+    console.log('o')
+    ctx.drawImage(img, 50, 50);
+  }
+
+  // ctx.stroke();
   },
   data() {
     return {
@@ -29,7 +43,7 @@ export default {
     width: 100%;
   }
   //   transform: rotateX(80deg);
-  animation: mymove 2s infinite;
+  // animation: mymove 2s infinite;
   transform-origin: 100% 50px;
 }
 .Home-head:before {
