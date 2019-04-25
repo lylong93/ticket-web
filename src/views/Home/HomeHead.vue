@@ -1,6 +1,5 @@
 <template>
   <div class="Home-head">
-    <!-- <img id="img" src="./1.jpg" alt> -->
     <canvas id="tutorial" width="150" height="150"></canvas>
   </div>
 </template>
@@ -22,7 +21,6 @@ export default {
     console.log('o')
     ctx.drawImage(img, 50, 50);
   }
-
   // ctx.stroke();
   },
   data() {
