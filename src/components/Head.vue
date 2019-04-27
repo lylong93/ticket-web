@@ -1,6 +1,6 @@
 <template>
-  <div class="MeWrapper">
-    <h1>This is me page</h1>
+  <div class="about">
+    <h1>This is foot page</h1>
   </div>
 </template>
 <script>
